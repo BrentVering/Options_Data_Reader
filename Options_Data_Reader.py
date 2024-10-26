@@ -1,5 +1,6 @@
 import streamlit as st
-from polygon import RESTClient
+import polygon
+
 
 st.subheader("Polygon+Streamlit Demo App")
 symbol = st.text_input("Enter a stock symbol", "AAPL")
@@ -10,7 +11,7 @@ with st.sidebar:
     polygon_api_key = st.text_input("gHsNnpPUQaoIRTbWmueDJbdPeRH4QVqu", type="password")
 
 # Authenticate with the Polygon API
-client = RESTClient(polygon_api_key)
+client = polygon.OptionsClient('gHsNnpPUQaoIRTbWmueDJbdPeRH4QVqu')
 
 col1, col2, col3 = st.columns(3)
 
