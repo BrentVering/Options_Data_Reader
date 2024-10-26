@@ -1,7 +1,6 @@
 import streamlit as st
 import polygon
 
-
 st.subheader("Polygon+Streamlit Demo App")
 symbol = st.text_input("Enter a stock symbol", "AAPL")
 
